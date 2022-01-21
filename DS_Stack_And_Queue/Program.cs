@@ -12,8 +12,9 @@ namespace DS_Stack_And_Queue
             while (flag == "Y" || flag == "y")
             {
 
-                Console.WriteLine("     Enter the option  1,2,3,4   ");
-                Console.WriteLine("-------Stack Operation----- \n1.Push Operation \n2.Pop and Peek Operation\n \n------Queue Operation------- \n3.EnQueue Operation\n");
+              
+                Console.WriteLine("-------Stack Operation----- \n1.Push Operation \n2.Pop and Peek Operation\n \n------Queue Operation------- \n3.EnQueue Operation \n4.DeQueue Operation\n");
+                Console.WriteLine("     Enter Your option  1,2,3,4  \n ");
                 int num = Convert.ToInt32(Console.ReadLine());
                 Stack stack = new Stack();
                 switch (num)
@@ -42,6 +43,17 @@ namespace DS_Stack_And_Queue
                         queue.Enqueue(70);
                         Console.WriteLine("===============================");
                         queue.Display();
+                        break;
+
+                    case 4:
+                        Queue queue1 = new Queue();
+                        queue1.Enqueue(56);
+                        queue1.Enqueue(30);
+                        queue1.Enqueue(70);
+                        Console.WriteLine("--------deque");
+                        queue1.Dequeue();
+                        Console.WriteLine("===============================");
+                        queue1.Display();
                         break;
 
                     default:
