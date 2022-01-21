@@ -7,8 +7,9 @@ namespace DS_Stack_And_Queue
         static void Main(string[] args)
         {
             Console.WriteLine("----------------Creating Stack Operations-------------------");
-            Console.WriteLine("---------------1.Push operation--------------");
-            Console.WriteLine("Enter the option");
+           
+            Console.WriteLine("     Enter the option     ");
+            Console.WriteLine("\n1.Push Operation \n2.Pop Operation");
             int num = Convert.ToInt32(Console.ReadLine());
             Stack stack = new Stack();
             switch (num)
@@ -18,6 +19,16 @@ namespace DS_Stack_And_Queue
                     stack.Push(30);
                     stack.Push(56);
                     Console.WriteLine("==================================");
+                    stack.Display();
+                    break;
+                case 2:
+                    stack.Push(70);
+                    stack.Push(30);
+                    stack.Push(56);
+                    
+                    Console.WriteLine("----------------------------------Using Peek method");
+                    //Console.WriteLine("Using Peek method");
+                    stack.Pop();
                     stack.Display();
                     break;
                 default:
