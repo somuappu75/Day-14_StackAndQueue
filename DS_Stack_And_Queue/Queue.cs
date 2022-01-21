@@ -26,6 +26,18 @@ namespace DS_Stack_And_Queue
             Console.WriteLine("Inserted into queue : " + new_node.data);
         }
 
+        //delete the element in front end
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty");
+            }
+            Node temp = this.head;
+            this.head = this.head.next;
+            Console.WriteLine("\nItem deleted is {0}", temp.data);
+        }
+
         public void Display()
         {
             Node temp = this.head;
